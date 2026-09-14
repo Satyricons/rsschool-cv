@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,105 +10,159 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
+
+    <!-- Библиотека (полная сборка) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+
+    <!-- Инициализация для v11 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            hljs.highlightAll();
+        });
+    </script>
+
 </head>
+
 <body>
 
-<div class="container">
-    <!-- Левая колонка: Контакты и Навыки -->
-    <aside class="sidebar">
-        <div class="profile">
-            <img src="./image/bill.png" alt="Это я"" class="photo">
-            <h1 class="name">Каминский Игорь Викторович</h1>
-            <p class="position">Frontend-разработчик</p>
-        </div>
+    <div class="container">
+        <!-- Левая колонка: Контакты и Навыки -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="./image/bill.png" alt="Это я"" class=" photo">
+                <h1 class="name">Каминский Игорь Викторович</h1>
+                <p class="position">Frontend-разработчик</p>
+            </div>
 
-        <section class="contact-info">
-            <h3>Контакты</h3>
-            <p><strong>Телефон:</strong> +375 (29) 666-66-66</p>
-            <p><strong>Email:</strong> satyricons@yandex.ru</p>
-            <p><strong>Город:</strong> Минск</p>
-            <p><strong>Telegram:</strong> @satyricons1</p>
-            <p><strong>GitHub:</strong> github.com/@satyricons</p>
-        </section>
+            <section class="contact-info">
+                <h3>Контакты</h3>
+                <p><strong>Телефон:</strong> +375 (29) 666-66-66</p>
+                <p><strong>Email:</strong> satyricons@yandex.ru</p>
+                <p><strong>Город:</strong> Минск</p>
+                <p><strong>Telegram:</strong> @satyricons1</p>
+                <p><strong>GitHub:</strong> github.com/@satyricons</p>
+            </section>
 
-        <section class="skills">
-            <h3>Навыки</h3>
-            <ul>
-                <li>HTML5, CSS3, SASS</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js, Vue.js</li>
-                <li>Node.js, Express</li>
-                <li>Git, Webpack</li>
-                <li>Figma</li>
-            </ul>
-        </section>
-
-        <section class="languages">
-            <h3>Языки</h3>
-            <p>Русский — родной</p>
-            <p>Английский — B2</p>
-        </section>
-    </aside>
-
-    <!-- Правая колонка: Опыт работы и Образование -->
-    <main class="content">
-        <section class="about">
-            <h2>Обо мне</h2>
-            <p>Опытный Frontend-разработчик с более чем 4-летним стажем коммерческой разработки. Специализируюсь на создании быстрых, отзывчивых пользовательских интерфейсов. Умею работать в команде по методологии Agile/Scrum.</p>
-        </section>
-<br>
-        <section class="experience">
-            <h2>Опыт работы</h2>
-            
-            <div class="job-item">
-                <h3>Senior Frontend Developer</h3>
-                <p class="company">OOO "Berkshire Hathaway" | 2022 — Настоящее время</p>
+            <section class="skills">
+                <h3>Навыки</h3>
                 <ul>
-                    <li>Разработка архитектуры клиентской части нового финтех-приложения.</li>
-                    <li>Оптимизация скорости загрузки страниц (Lighthouse score: 95+).</li>
-                    <li>Менторство двух младших разработчиков.</li>
+                    <li>HTML5, CSS3, SASS</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js, Vue.js</li>
+                    <li>Node.js, Express</li>
+                    <li>Git, Webpack</li>
+                    <li>Figma</li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="job-item">
-                <h3>Middle Frontend Developer</h3>
-                <p class="company">Студия дизайна «Прикол», Минск | 2020 — 2022</p>
-                <ul>
-                    <li>Верстка макетов из Figma с Pixel Perfect точностью.</li>
-                    <li>Создание интерактивных компонентов на React.js.</li>
-                    <li>Интеграция REST API бэкенда.</li>
-                </ul>
-            </div>
-        </section>
+            <section class="languages">
+                <h3>Языки</h3>
+                <p>Русский — родной</p>
+                <p>Английский — B2</p>
+            </section>
+        </aside>
 
-        <section class="education">
-            <h2>Образование</h2>
-            <div class="edu-item">
-                <h3>Высшее. "Системы передачи информации"</h3>
-                <p class="university">БелГут</p>
-            </div>
-        </section>
+        <!-- Правая колонка: Опыт работы и Образование -->
+        <main class="content">
+            <section class="about">
+                <h2>Обо мне</h2>
+                <p>Опытный Frontend-разработчик с более чем 4-летним стажем коммерческой разработки. Специализируюсь на
+                    создании быстрых, отзывчивых пользовательских интерфейсов. Умею работать в команде по методологии
+                    Agile/Scrum.</p>
+            </section>
+            <br>
+            <section class="experience">
+                <h2>Опыт работы</h2>
 
-        <section class="education">
-            <h2>Благотворительность</h2>
-            <div class="edu-item">
-                <h3>Клятва помощи</h3>
-                <br>
-                <p class="university">Торжественно клянусь жертвовать не менее половины своего состояния на благотворительность, так как в благотворительности нужно равняться на Чарльза Фини, потратившегося на благотворительные цели более 31 млрд долларов (согласно данным из налоговых деклараций)</p>
-            </div>
-        </section>
-  <section class="education">
-            <h2>Менторство</h2>
-            <div class="edu-item">
-                <img src="./image/logo.jpg" alt="Менторство"" class="photo">
-                <h3>Являюсь постоянным ментором и наставником RSS School</h3>
-                <br>
-                <p class="university">Я работаю по принципу "Pay it forward". Согласно этому принципу, я с единомышленниками ожидаем что студенты, отучившиеся в школе бесплатно, возвратятся назад в качестве менторов, чтобы передать свои знания следующему поколению студентов.</p>
-            </div>
-        </section>
+                <div class="job-item">
+                    <h3>Senior Frontend Developer</h3>
+                    <p class="company">OOO "Berkshire Hathaway" | 2022 — Настоящее время</p>
+                    <ul>
+                        <li>Разработка архитектуры клиентской части нового финтех-приложения.</li>
+                        <li>Оптимизация скорости загрузки страниц (Lighthouse score: 95+).</li>
+                        <li>Менторство двух младших разработчиков.</li>
+                    </ul>
+                </div>
 
-    </main>
-</div>
+                <div class="job-item">
+                    <h3>Middle Frontend Developer</h3>
+                    <p class="company">Студия дизайна «Прикол», Минск | 2020 — 2022</p>
+                    <ul>
+                        <li>Верстка макетов из Figma с Pixel Perfect точностью.</li>
+                        <li>Создание интерактивных компонентов на React.js.</li>
+                        <li>Интеграция REST API бэкенда.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Образование</h2>
+                <div class="edu-item">
+                    <h3>Высшее. "Системы передачи информации"</h3>
+                    <p class="university">БелГут</p>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Благотворительность</h2>
+                <div class="edu-item">
+                    <h3>Клятва помощи</h3>
+                    <br>
+                    <p class="university">Торжественно клянусь жертвовать не менее половины своего состояния на
+                        благотворительность, так как в благотворительности нужно равняться на Чарльза Фини,
+                        потратившегося на благотворительные цели более 31 млрд долларов (согласно данным из налоговых
+                        деклараций)</p>
+                </div>
+            </section>
+            <section class="education">
+                <h2>Менторство</h2>
+                <div class="edu-item">
+                    <img src="./image/logo.jpg" alt="Менторство"" class=" photo">
+                    <h3>Являюсь постоянным ментором и наставником RSS School</h3>
+                    <br>
+                    <p class="university">Я работаю по принципу "Pay it forward". Согласно этому принципу, я с
+                        единомышленниками ожидаем что студенты, отучившиеся в школе бесплатно, возвратятся назад в
+                        качестве менторов, чтобы передать свои знания следующему поколению студентов.</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Пример кода</h2>
+                <div class="edu-item">
+                    
+                    <h3>Кодить так кодить, главное - не говнокодить</h3>
+                <pre><code class="lang-js">// переменная, которая говорит о том подключен ли «highlight.js» к странице
+let hasLoaded = false;
+// функция, в которой напишем код для подсветки синтаксиса, используя методы highlight.js
+const highlight = () => { ... }
+// функция для динамического подключения highlight.js к странице
+const loadCSSandJS = () => {
+  // вставляем стили
+  const style = document.createElement('link');
+  style.rel = 'stylesheet';
+  style.href = 'assets/css/highlight.min.css';
+  document.head.appendChild(style);
+  // вставляем скрипт
+  const script = document.createElement('script');
+  script.src = 'assets/js/highlight.min.js';
+  script.async = 1;
+  document.head.appendChild(script);
+  script.onload = () => {
+    // после загрузки скрипта присваиваем переменной hasLoaded значение true и вызываем функцию highlight для подсветки синтаксиса
+    hasLoaded = true;
+    highlight();
+  }
+}
+</code>
+</pre>
+
+            </section>
+
+        </main>
+    </div>
 
 </body>
+
 </html>
