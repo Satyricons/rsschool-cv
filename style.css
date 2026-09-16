@@ -15,11 +15,23 @@
     padding: 0;
 }
 
+html {
+    /* Плавный скролл по якорям из меню */
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: white;
+    /* Отступ сверху, чтобы фиксированный хэдер не перекрывал контент */
+    padding-top: 70px;
+}
+
+/* Компенсация высоты фиксированного хэдера при переходе по якорям */
+section[id] {
+    scroll-margin-top: 90px;
 }
 
 .container {
@@ -29,160 +41,6 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
-}
-
-/* --- Сайдбар (Левая часть) --- */
-.sidebar {
-    position: sticky;
-    top: 40px;
-    align-self: start;
-    height: fit-content;
-}
-
-.profile {
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--accent-color);
-    margin-bottom: 15px;
-}
-
-.name {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.position {
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-/* Блоки информации внутри сайдбара */
-.sidebar section {
-    margin-bottom: 30px;
-}
-
-.sidebar h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    position: relative;
-    padding-left: 20px;
-}
-
-/* Иконка перед заголовками секций */
-.sidebar h3::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    width: 12px;
-    height: 12px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-}
-
-.contact-info p, .languages p {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    margin-bottom: 8px;
-}
-
-.skills ul {
-    list-style-type: none;
-}
-
-.skills li {
-    background-color: var(--bg-light);
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    transition: transform 0.2s;
-}
-
-.skills li:hover {
-    transform: translateY(-2px);
-    background-color: var(--accent-color);
-    color: white;
-}
-
-/* --- Основная часть (Правая сторона) --- */
-.content h2 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent-color);
-    padding-left: 15px;
-}
-
-.about p {
-    color: var(--text-light);
-    text-align: justify;
-}
-
-.job-item, .edu-item {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed var(--border-color);
-}
-
-.job-item:last-child, .edu-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.job-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.company {
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-.content ul {
-    padding-left: 20px;
-    color: var(--text-light);
-}
-
-.content li {
-    margin-bottom: 8px;
-}
-
-/* --- Адаптивность (для мобильных устройств) --- */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        position: static;
-        text-align: center;
-    }
-    
-    .photo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .skills li {
-        margin-bottom: 10px;
-    }
 }
 
 /* ============================================================
@@ -257,19 +115,191 @@ body {
     width: 100%;
 }
 
-/* Отступ сверху, чтобы фиксированный хэдер не перекрывал контент */
-body {
-    padding-top: 70px;
+/* ============================================================
+   САЙДБАР (левая колонка)
+   ============================================================ */
+.sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    height: fit-content;
 }
 
-/* Плавный скролл по якорям */
-html {
-    scroll-behavior: smooth;
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Компенсация высоты хэдера при переходе по якорям */
-section[id] {
-    scroll-margin-top: 90px;
+.photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.position {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Блоки информации внутри сайдбара */
+.sidebar section {
+    margin-bottom: 30px;
+}
+
+.sidebar h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Иконка перед заголовками секций */
+.sidebar h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.contact-info p,
+.languages p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills li {
+    background-color: var(--bg-light);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.skills li:hover {
+    transform: translateY(-2px);
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ============================================================
+   ОСНОВНАЯ ЧАСТЬ (правая колонка)
+   ============================================================ */
+.content h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+.about {
+    /* Заменяет <br>, который был между секциями */
+    margin-bottom: 30px;
+}
+
+.about p {
+    color: var(--text-light);
+    text-align: justify;
+}
+
+.job-item,
+.edu-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.job-item:last-child,
+.edu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.job-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.company {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    padding-left: 20px;
+    color: var(--text-light);
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* Секции charity / mentorship / code — наследуют вид .education,
+   но на всякий случай дублируем правило для .edu-item внутри них */
+.charity .edu-item,
+.mentorship .edu-item,
+.code .edu-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.charity .edu-item:last-child,
+.mentorship .edu-item:last-child,
+.code .edu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Картинка внутри секции менторства — не круглая, а обычная */
+.mentorship .photo {
+    width: auto;
+    height: auto;
+    max-width: 160px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+/* Блок с кодом */
+.code pre {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.code code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
 /* ============================================================
@@ -333,9 +363,29 @@ section[id] {
 }
 
 /* ============================================================
-   АДАПТИВНОСТЬ ДЛЯ ХЭДЕРА И ФУТЕРА
+   АДАПТИВНОСТЬ
    ============================================================ */
 @media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sidebar {
+        position: static;
+        text-align: center;
+    }
+
+    .photo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills li {
+        margin-bottom: 10px;
+    }
+
+    /* Хэдер: логотип сверху, меню снизу */
     .header-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -349,13 +399,14 @@ section[id] {
     }
 
     body {
-        padding-top: 120px;
+        padding-top: 130px;
     }
 
     section[id] {
-        scroll-margin-top: 140px;
+        scroll-margin-top: 150px;
     }
 
+    /* Футер в одну колонку */
     .footer-inner {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -365,5 +416,11 @@ section[id] {
     .footer-col h4::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .mentorship .photo {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
