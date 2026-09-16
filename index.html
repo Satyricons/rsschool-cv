@@ -21,16 +21,32 @@
             hljs.highlightAll();
         });
     </script>
-
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- ================= ХЭДЕР ================= -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#top" class="logo">Игорь&nbsp;Каминский</a>
+
+            <nav class="main-nav">
+                <a href="#about">Обо мне</a>
+                <a href="#experience">Опыт</a>
+                <a href="#education">Образование</a>
+                <a href="#charity">Благотворительность</a>
+                <a href="#mentorship">Менторство</a>
+                <a href="#code">Код</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= КОНТЕНТ ================= -->
+    <div class="container" id="top">
         <!-- Левая колонка: Контакты и Навыки -->
         <aside class="sidebar">
             <div class="profile">
-                <img src="./image/bill.png" alt="Это я"" class=" photo">
+                <img src="./image/bill.png" alt="Это я" class="photo">
                 <h1 class="name">Каминский Игорь Викторович</h1>
                 <p class="position">Frontend-разработчик</p>
             </div>
@@ -65,14 +81,14 @@
 
         <!-- Правая колонка: Опыт работы и Образование -->
         <main class="content">
-            <section class="about">
+            <section class="about" id="about">
                 <h2>Обо мне</h2>
                 <p>Опытный Frontend-разработчик с более чем 4-летним стажем коммерческой разработки. Специализируюсь на
                     создании быстрых, отзывчивых пользовательских интерфейсов. Умею работать в команде по методологии
                     Agile/Scrum.</p>
             </section>
             <br>
-            <section class="experience">
+            <section class="experience" id="experience">
                 <h2>Опыт работы</h2>
 
                 <div class="job-item">
@@ -96,7 +112,7 @@
                 </div>
             </section>
 
-            <section class="education">
+            <section class="education" id="education">
                 <h2>Образование</h2>
                 <div class="edu-item">
                     <h3>Высшее. "Системы передачи информации"</h3>
@@ -104,7 +120,7 @@
                 </div>
             </section>
 
-            <section class="education">
+            <section class="education" id="charity">
                 <h2>Благотворительность</h2>
                 <div class="edu-item">
                     <h3>Клятва помощи</h3>
@@ -115,10 +131,11 @@
                         деклараций)</p>
                 </div>
             </section>
-            <section class="education">
+
+            <section class="education" id="mentorship">
                 <h2>Менторство</h2>
                 <div class="edu-item">
-                    <img src="./image/logo.jpg" alt="Менторство"" class=" photo">
+                    <img src="./image/logo.jpg" alt="Менторство" class="photo">
                     <h3>Являюсь постоянным ментором и наставником RSS School</h3>
                     <br>
                     <p class="university">Я работаю по принципу "Pay it forward". Согласно этому принципу, я с
@@ -127,13 +144,11 @@
                 </div>
             </section>
 
-
-            <section>
+            <section id="code">
                 <h2>Пример кода</h2>
                 <div class="edu-item">
-                    
                     <h3>Кодить так кодить, главное - не говнокодить</h3>
-                <pre><code class="lang-js">// переменная, которая говорит о том подключен ли «highlight.js» к странице
+                    <pre><code class="lang-js">// переменная, которая говорит о том подключен ли «highlight.js» к странице
 let hasLoaded = false;
 // функция, в которой напишем код для подсветки синтаксиса, используя методы highlight.js
 const highlight = () => { ... }
@@ -155,13 +170,37 @@ const loadCSSandJS = () => {
     highlight();
   }
 }
-</code>
-</pre>
-
+</code></pre>
+                </div>
             </section>
-
         </main>
     </div>
+
+    <!-- ================= ФУТЕР ================= -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>Каминский Игорь</h4>
+                <p>Frontend-разработчик</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p><a href="mailto:satyricons@yandex.ru">satyricons@yandex.ru</a></p>
+                <p><a href="https://t.me/satyricons1" target="_blank" rel="noopener">@satyricons1</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Ссылки</h4>
+                <p><a href="https://github.com/@satyricons" target="_blank" rel="noopener">GitHub</a></p>
+                <p><a href="#top">Наверх ↑</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Игорь Каминский. Все права защищены.</p>
+        </div>
+    </footer>
 
 </body>
 
