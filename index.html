@@ -57,7 +57,8 @@
                 <p><strong>Email:</strong> satyricons@yandex.ru</p>
                 <p><strong>Город:</strong> Минск</p>
                 <p><strong>Telegram:</strong> @satyricons1</p>
-                <p><strong>GitHub:</strong> github.com/@satyricons</p>
+                <!-- FIX: убран лишний @ в URL GitHub -->
+                <p><strong>GitHub:</strong> github.com/satyricons</p>
             </section>
 
             <section class="skills">
@@ -87,7 +88,7 @@
                     создании быстрых, отзывчивых пользовательских интерфейсов. Умею работать в команде по методологии
                     Agile/Scrum.</p>
             </section>
-            <br>
+
             <section class="experience" id="experience">
                 <h2>Опыт работы</h2>
 
@@ -120,11 +121,11 @@
                 </div>
             </section>
 
-            <section class="education" id="charity">
+            <!-- FIX: отдельный класс для благотворительности -->
+            <section class="charity" id="charity">
                 <h2>Благотворительность</h2>
                 <div class="edu-item">
                     <h3>Клятва помощи</h3>
-                    <br>
                     <p class="university">Торжественно клянусь жертвовать не менее половины своего состояния на
                         благотворительность, так как в благотворительности нужно равняться на Чарльза Фини,
                         потратившегося на благотворительные цели более 31 млрд долларов (согласно данным из налоговых
@@ -132,23 +133,25 @@
                 </div>
             </section>
 
-            <section class="education" id="mentorship">
+            <!-- FIX: отдельный класс для менторства -->
+            <section class="mentorship" id="mentorship">
                 <h2>Менторство</h2>
                 <div class="edu-item">
                     <img src="./image/logo.jpg" alt="Менторство" class="photo">
                     <h3>Являюсь постоянным ментором и наставником RSS School</h3>
-                    <br>
                     <p class="university">Я работаю по принципу "Pay it forward". Согласно этому принципу, я с
                         единомышленниками ожидаем что студенты, отучившиеся в школе бесплатно, возвратятся назад в
                         качестве менторов, чтобы передать свои знания следующему поколению студентов.</p>
                 </div>
             </section>
 
-            <section id="code">
+            <!-- FIX: добавлен класс code -->
+            <section class="code" id="code">
                 <h2>Пример кода</h2>
                 <div class="edu-item">
                     <h3>Кодить так кодить, главное - не говнокодить</h3>
-                    <pre><code class="lang-js">// переменная, которая говорит о том подключен ли «highlight.js» к странице
+                    <!-- FIX: language-js вместо lang-js — иначе highlight.js не подсветит -->
+                    <pre><code class="language-js">// переменная, которая говорит о том подключен ли «highlight.js» к странице
 let hasLoaded = false;
 // функция, в которой напишем код для подсветки синтаксиса, используя методы highlight.js
 const highlight = () => { ... }
@@ -192,7 +195,8 @@ const loadCSSandJS = () => {
 
             <div class="footer-col">
                 <h4>Ссылки</h4>
-                <p><a href="https://github.com/@satyricons" target="_blank" rel="noopener">GitHub</a></p>
+                <!-- FIX: убран лишний @ в URL GitHub -->
+                <p><a href="https://github.com/satyricons" target="_blank" rel="noopener">GitHub</a></p>
                 <p><a href="#top">Наверх ↑</a></p>
             </div>
         </div>
